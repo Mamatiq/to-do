@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/null.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__main">
+                <a href="#" class="header__text">ToDo List</a>
+                <div class="header__newtask">
+                    <input type="text" class="header__input">
+                    <button class="header__battoon">
+                    Add a new task
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="exercise">
+            <div class="exercise__to_do exercise">
+                <div class="exercise__unfinished ">
+                    <span class="unfinished__text"> 
+                        To Do
+                    </span>
+                    <span id="completed-todo" class="unfinished__do_list">
+                        {{ needDoList.length }}
+                    </span>
+                </div>
+                <div class=" exercise__unfinished__task ">
+                    <input class="checkbox__task checkbox" type="checkbox">
+                    <span class="task__text ">{{ mask.title }}</span>
+                    <button class="button__task button__exercise">remowe</button>
+                </div>
+            </div>
+            
+            <div class="exercise darkened">
+                <div class="exercise__to_do exercise">
+                    <div class="exercise__unfinished ">
+                        <span class="unfinished__text"> 
+                            Done
+                        </span>
+                        <span id="uncompleted-todo" class="unfinished__do_list">
+                            {{ needDoList.length }}
+                        </span>
+                    </div>
+                    <div class=" exercise__unfinished__task ">
+                        <input class="checkbox__task checkbox" type="checkbox">
+                        <span class="task__text ">{{ mask.title }}</span>
+                        <button class="button__task button__exercise">remowe</button>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+    </div>
+<script src="/js/skript.js"></script>
+</body>
+</html>

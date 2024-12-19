@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
+} 
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+* {
+    font-family: "Ubuntu";
+}
+.header__main {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    height: 70px;
+    width: 100%;
+    margin: 0 auto;
+} 
+.exercise__to_do::after {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 1px;
+    background: #000;
+    margin: 0px 0px;
+}
+.header__text {
+    color: #bbb;
+    font-size: 24px;
+    width: 100px;
+}
+.header__newtask {
+    width: 480px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__input {
+    width: 480px;
+    height: 40px;
+    align-items: end;
+    margin-right: 20px;
+}
+.header__battoon {
+    width: 200px;
+    height: 40px;
+    background-color: #12c0dd;
+    color: #fff;
+    font-weight: 700;
+    /* font-size: 40px; */
+    text-transform: uppercase;
+    padding: 10px 10px 10px 10px;
+}
+.exercise {
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* .exercise__to_do {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 80px 0px; */
+/* }*/ 
+.exercise__unfinished {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+}
+.exercise__unfinished__task {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    /* position: absolute; */
+    margin: 40px 0px;
+    position: relative;
+}
+.checkbox__task {
+    width: 20px;
+    height: 20px; 
+}
+.task__text {
+    margin: 0px 590px 0px 20px;
+}
+.unfinished__text { 
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.unfinished__do_list {
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 3px solid #000;
+    border-radius: 40px;
+    padding: 7px;
+}
+.button__exercise {
+    background-color: #333;
+    color: #fff;
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 700;
+    width: 61px;
+    height: 25px;
+}
+.button__exercise:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.exercise__finished {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    /* position: absolute; */
+    margin: 90px 0px 0px 0px;
+
+}
+.finished__texts{
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.finished__do_list {
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 3px solid #000;
+    border-radius: 40px;
+    padding: 7px;
+    opacity: 0.8;
+}
+.exercise__completed__task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+}
+.completed__task_text {
+    margin: 0px 590px 0px 20px;
+    opacity: 0.6;
+}
+.completed__button_task {
+    background-color: #333;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 12px;
+    font-weight: 700;
+    width: 61px;
+    height: 25px;
+}
+.completed__button_task:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.checkbox__completed {
+    width: 20px;
+    height: 20px;
+}
+.checkbox::before:checked {
+    content: "";
+    display: none;
+    background-color: #12c0dd;
+    top: 50%;
+    left: 50%;
+}
+.darkened {
+    opacity: 0.6;
+}
