@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/null.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+      </style>
+    <div id="wrapper" class="wrapper">
+      <header class="header">
+        <div class="header__main">
+          <a href="#" class="header__text" target="_blank">ToDo List</a>
+          <div class="header__newtask">
+            <input type="text" class="header__input" id="input__heder"/>
+            <button id="Button__heder" class="header__battoon">Add a new task</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="exercise">
+        <div class="exercise__to_do exercise">
+          <div  class="exercise__unfinished">
+            <span  class="unfinished__text"> To Do </span>
+            <span id="completed-todo" class="unfinished__do_list">
+              {{ needDoList.length }}
+            </span>
+          </div> 
+          
+          <div id="to_do" class="exercise__unfinished__task">
+            <input class="checkbox__task checkbox" type="checkbox" />
+            <span id="span" class="task__text">{{ mask.title }}</span>
+            <button id="button__remove" class="button__task button__exercise">remowe</button>
+          </div>
+        </div>
+
+        <div class="exercise darkened">
+          <div class="exercise__to_do exercise">
+            <div class="exercise__unfinished">
+              <span class="unfinished__text"> Done </span>
+              <span id="uncompleted-todo" class="unfinished__do_list">
+                {{ needDoList.length }}
+              </span>
+            </div>
+            <div class="exercise__unfinished__task">
+              <input class="checkbox__task checkbox" type="checkbox" />
+              <span class="task__text">{{ mask.title }}</span>
+              <button class="button__task button__exercise">remowe</button>
+            </div>
+          </div>
+        </div>
+        <div id="first-id">
+          <button class="button-id" id="button_id">Это типо кнопочка</button>
+        </div>
+        <h3 class="text" id="h3"> Этот текст должен будет изменяться </h3>
+        <div class="p">
+          <p>Привет</p>
+          <p>Это P</p>
+          <p>Этот текст будет изменяться</p>
+          <p>Возможно</p>
+        </div>
+      </div>
+    </div>
+    <script src="/js/skript.js"></script>
+  </body>
+</html>
