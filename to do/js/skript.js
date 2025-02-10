@@ -611,7 +611,7 @@ window.onload = async function (todo) {
 const inputHed = document.getElementById("input__heder");
 const One = document.getElementById("Button__heder");
 const input = document.getElementById("input__heder");
-const inputValue = input.value;
+const inputValue = input.value; 
 const to_do = document.getElementById('to_do');
 
 // inputHed.addEventListener("input", function(e) {
@@ -662,31 +662,50 @@ function getN() {
         console.log(result);
 
 
+
+        const SSS = document.getElementsByClassName("button_todo"); 
+        const Arr = Array.from(SSS);
+
+        const butt = document.getElementsByClassName('exercise__unfinished__task')
+        const Aray = Array.from(butt); 
+
+        Arr.forEach(button => {
+            button.addEventListener('click', fff);
+        });
+        function fff() {
+            const res = []; // Предполагаем, что result определен где-то в коде
+            Arr.forEach(function (item) {
+            const but = item.querySelector('.button__task'); // Исправлено на правильный селектор
+            console.log(but);
+        });
+
+
+        Aray.forEach(button => {
+            button.addEventListener('click', aaa);
+        });
+
+        function aaa() {
+            if (Aray.parentNode) {
+                Aray.parentNode.removeChild(Aray);
+            };
+        };
+    }
+
     } else {
         console.log('Введите текст для добавления');
     }
 }
 
-result.forEach (function (item) {
-    const but = item.querySelector('button__exercise')
-    console.log(but);
-    //  item.addEventListener('click', function() {
-    //     item.remove();
-    // }
-// );
-})
+    //     Array.from(SSS).forEach(button => {
+    //     button.addEventListener('click', gg);
+    // });
 
-const remove = document.getElementById("to_do");
+    // Arr.forEach(button => {
+    //     button.addEventListener('click', gg);
+    // });
 
-// const node = document.getElementById("nested");
-
-// const remove = getElementByClassName('exercise__unfinished__task')
-
-remove.addEventListener('click', function() {
-    if (remove.parentNode) {
-        remove.parentNode.removeChild(remove);
-    }});
-
-// remove.addEventListener('click', function() {
-//     document.getElementById('remove').innerHTML = '';
-//     });
+    // function gg() {
+    //         if (Arr.parentNode) {
+    //             Arr.parentNode.removeChild(Arr);
+    //         };
+    //     }
