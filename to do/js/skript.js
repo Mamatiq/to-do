@@ -8,21 +8,21 @@ window.onload = async function (todo) {
     let uncompletedList = [];
 
     // let uncompletedCountElement = document.getElementById("uncompleted-todo");
-    
+
     await fetch('http://jsonplaceholder.typicode.com/todos')
-    .then(response => list = response.json())
-    .then(json => list = json.slice(0, 20))
-    .catch(error => console.log(error))
-    
+        .then(response => list = response.json())
+        .then(json => list = json.slice(0, 20))
+        .catch(error => console.log(error))
+
     console.log(list);
 
     for (let i = 0; i < list.length; i++) {
         const currentTodo = list[i]
-            if (currentTodo.completed === true) {
-                completedList.push(currentTodo)
-            } else {
-                uncompletedList.push(currentTodo)
-            }
+        if (currentTodo.completed === true) {
+            completedList.push(currentTodo)
+        } else {
+            uncompletedList.push(currentTodo)
+        }
     }
 
     completedCountElement.textContent = completedList.length;
@@ -44,12 +44,12 @@ window.onload = async function (todo) {
 // cal();
 
 // function fn1() {
-    
+
 // }
 
 // function a1() {
 //     let fn1 = console.log('Hello from fn1');    
-    
+
 //     function a2() {
 //         console.log('Hello from alert');
 //         return fn1
@@ -608,104 +608,110 @@ window.onload = async function (todo) {
 //     Three.style.backgroundColor = "#111"
 // });
 
-const inputHed = document.getElementById("input__heder");
-const One = document.getElementById("Button__heder");
-const input = document.getElementById("input__heder");
-const inputValue = input.value; 
-const to_do = document.getElementById('to_do');
+// const One = document.querySelector("#Button__heder");
+// const input = document.getElementById("input__heder");
+// const to_do = document.getElementById('to_do');
+// const todoList = document.querySelector('#todo-list');
 
-// inputHed.addEventListener("input", function(e) {
-//   document.getElementById("heder").textContent = e.target.value;
-// });
+// One.addEventListener('click', getN);
 
+// const result = document.querySelectorAll('.exercise__unfinished__task');
+// console.log(result);
 
-// One.addEventListener("click", function(e){
-//     for (input.value of input) {
-//         console.log(val);
-// }});
+// function getN(newDiv) {
+//     if (input.values != "") {
+//         const todoElement = document.getElementById('to_do');
+//         const newDiv = document.createElement('div');
+//         newDiv.id = Date.now();
+//         newDiv.classList.add('exercise__unfinished__task');
+//         newDiv.innerHTML = `
+//             <input class="checkbox__task checkbox" type="checkbox" />
+//             <span id="span" class="task__text">${input.value}</span>
+//             <button id="button__remove" class="button_todo button__task button__exercise">remowe</button>
+//         `;
+//         todoList.appendChild(newDiv);
+//         input.value = "";
 
-// const addTime = document.getElementById('add');
-
-One.addEventListener('click', getN);
-
-const result = document.querySelectorAll('.exercise__unfinished__task');
-console.log(result);
-
-
-function getN() {
-        // вот тут как раз берётся значение value из input
-    const data_input = document.getElementById('input__heder').value;
-    // проверка на является ли input пустой
-    if (data_input != "") {
-        // Вывод в консоль текста, который я взял из inputa
-        console.log(data_input);
-        // Создаётся элемент todoElement с ссылкой на id 
-        const todoElement = document.getElementById('to_do');
-        // Создаётся новый div с задачей и добавляется в конец списка
-        const newDiv = document.createElement('div');
-        // добавляется id 'to_do' и класс 'exercise__unfinished__task' к divу
-        newDiv.id = Date.now();
-        // добавляется класс 'exercise__unfinished__task' к divу
-        newDiv.classList.add('exercise__unfinished__task');
-        // добавляется событие на кнопку удаления
-        newDiv.innerHTML = `
-            <input class="checkbox__task checkbox" type="checkbox" />
-            <span id="span" class="task__text">${ data_input }</span>
-            <button id="button__remove" class="button__task button__exercise">remowe</button>
-        `;
-        todoElement.parentElement.appendChild(newDiv); 
-        // удаляет введённую задачу из input
-        document.getElementById('input__heder').value = "";
-        // удаляет текущую задачу
-
-        const result = document.querySelectorAll('.exercise__unfinished__task');
-        console.log(result);
+//         const result = document.querySelectorAll('.exercise__unfinished__task');
+//         console.log(result);
 
 
 
-        const SSS = document.getElementsByClassName("button_todo"); 
-        const Arr = Array.from(SSS);
+//     } else {
+//         console.log('Введите текст для добавления');
+//     }
+// }
 
-        const butt = document.getElementsByClassName('exercise__unfinished__task')
-        const Aray = Array.from(butt); 
+// const batton = document.querySelector('#button__remove')
+// const SSS = document.querySelectorAll("button_todo");
+// const Arr = SSS;
 
-        Arr.forEach(button => {
-            button.addEventListener('click', fff);
-        });
-        function fff() {
-            const res = []; // Предполагаем, что result определен где-то в коде
-            Arr.forEach(function (item) {
-            const but = item.querySelector('.button__task'); // Исправлено на правильный селектор
-            console.log(but);
-        });
+// batton.addEventListener('click', fff);
 
+// const remowebatton = document.querySelector('.button__task');
 
-        Aray.forEach(button => {
-            button.addEventListener('click', aaa);
-        });
+// function fff() {
+//     Arr.forEach(item => {
+//         const SSS = document.querySelectorAll("button_todo");
+//         const Arr = SSS;
+//         console.log(Arr);
+//         const remowebatton = document.querySelector('.button__task');
+//         remowebatton.addEventListener('click', () => {
+//             this.remove();
+//         });
+//     })
+// };
 
-        function aaa() {
-            if (Aray.parentNode) {
-                Aray.parentNode.removeChild(Aray);
-            };
-        };
+window.onload = (event) => {
+    const headerbutton = document.querySelector('#Button__heder');
+    const headerinput = document.querySelector('.header__input');
+    const todoList = document.querySelector('#todo-list');
+
+    const todo = () => {
+        if (headerinput.value === '') {
+            console.log('Введите текст задачи');
+            return;
+        }
+        const item = document.createElement('div')
+        item.innerHTML = `
+        <input class="checkbox__task checkbox" type="checkbox" />
+        <span id="span" class="task__text">${headerinput.value}</span>
+        <button id="button__remove" class="button_todo button__task button__exercise">remowe</button>
+        `
+        item.classList.add('exercise__unfinished__task');
+        todoList.appendChild(item);
+        headerinput.value = '';
+        fremove(item);
+        
     }
 
-    } else {
-        console.log('Введите текст для добавления');
+    const fremove = (item) => {
+        console.log(item);
+        const task = item.querySelector('.button__exercise')
+        console.log(task);
+        task.addEventListener('click', () => {
+            item.remove();
+        })
+
+        const unfinished_todo = document.querySelector('#untodo-list')
+        const checkbox_todo = item.querySelector('.checkbox__task');
+        checkbox_todo.addEventListener('change', () => {
+            const p_prime = checkbox_todo
+            console.log(p_prime)
+        
+        const unfinished = document.createElement('div')
+        unfinished.innerHTML = `
+        <input class="checkbox__task checkbox" type="checkbox" />
+        <span id="span" class="task__text">${checkbox_todo.value}</span>
+        <button id="button__remove" class="button_todo button__task button__exercise">remowe</button>
+        `
+        unfinished.classList.add('exercise__finished__task')
+        unfinished_todo.appendChild(item);
+
+        })
+
+
     }
-}
 
-    //     Array.from(SSS).forEach(button => {
-    //     button.addEventListener('click', gg);
-    // });
-
-    // Arr.forEach(button => {
-    //     button.addEventListener('click', gg);
-    // });
-
-    // function gg() {
-    //         if (Arr.parentNode) {
-    //             Arr.parentNode.removeChild(Arr);
-    //         };
-    //     }
+    headerbutton.addEventListener('click', todo);
+};
